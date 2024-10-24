@@ -1,0 +1,19 @@
+-- useEffect
+
+* useEffect allows you perform side effects from a function component. 
+When useEffect is called, React knows to render your side effect only after changes are made to the DOM
+React runs the effect after every render if you do not pass in 
+an array of dependencies. useEffect runs after the component is mounted and will run again if any of its 
+dependencies changes
+
+* But if you need your side effect to fire synchronously 
+after the DOM mutation, that is, before the next browser paint without the user ever noticing any flickering or visual 
+inconsistency then you need to use useLayoutEffect
+
+-- useLayoutEffect
+
+* useLayoutEffect fires synchronously after the DOM mutation 
+and before the browser get to paint the new changes. 
+This hook is especially useful for performing DOM measurement 
+like scroll height, scroll width, scroll position and other 
+style on any DOM element.
